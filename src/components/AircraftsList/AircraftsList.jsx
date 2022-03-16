@@ -1,6 +1,11 @@
 import {useState, useEffect} from 'react';
 import {api} from 'services/api'
-const AircraftsList = ({setAircraftSelected}) => {
+import {ScrolableList} from 'styles/scrollable'
+import {Title} from 'styles/typografy'
+
+import {Container,AircraftsCard,Pecentage } from './styles'
+
+const AircraftsList = ({setAircraftSelected,height}) => {
     const [aircrafts, setAircrafts] = useState([])
     
     useEffect(() => {
@@ -18,17 +23,21 @@ const AircraftsList = ({setAircraftSelected}) => {
     }, []);
 
     return (
-        <div>
-            <ul>
+        <>
+            <Title>Aircrafts</Title>
+            <Container style={{height}}>
+            <ScrolableList>
                 {aircrafts.map(aircraft => (
                     <li key={aircraft.ident}>
-                        <button onClick={() => setAircraftSelected(aircraft)}>
-                            {aircraft.ident}
-                        </button>
+                        <AircraftsCard onClick={() => setAircraftSelected(aircraft)}>
+                            <span>{aircraft.ident}</span>
+                            <Pecentage>0%</Pecentage>
+                        </AircraftsCard>
                     </li>
                 ))}
-            </ul>
-        </div>
+            </ScrolableList>
+        </Container>
+        </>
     )
 }
 
