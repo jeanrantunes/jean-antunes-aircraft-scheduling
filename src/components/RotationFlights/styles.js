@@ -34,3 +34,7 @@ export const Arrow = styled.span`
 export const DestinationLabels = styled(Col)`
     text-align: right;
 `
+
+export const CheckboxInput = styled.input`
+    float: right;
+`

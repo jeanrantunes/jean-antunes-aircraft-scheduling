@@ -13,6 +13,7 @@ const ROTATION_FLIGHTS_HEIGHT = 350
 
 const Dashboard = () => {
     const [aircraftSelected, setAircraftSelected] = useState(null)
+    const [queueFlightsSelected, setQueueFlightsSelected] = useState([])
     
     return (
         <Grid>
@@ -27,12 +28,12 @@ const Dashboard = () => {
                 </Col>
                 <Col xs={4}>
                     <div>
-                        <RotationFlights height={ROTATION_FLIGHTS_HEIGHT} aircraftSelected={aircraftSelected}/>
+                        <RotationFlights height={ROTATION_FLIGHTS_HEIGHT} aircraftSelected={aircraftSelected} queueFlightsSelected={queueFlightsSelected} setQueueFlightsSelected={setQueueFlightsSelected}/>
                         <Timeline />
                     </div>
                 </Col>
                 <Col xs={4}>
-                    <FlightsList height={AIRCRAFT_AND_FLIGHTS_HEIGHT} />
+                    <FlightsList height={AIRCRAFT_AND_FLIGHTS_HEIGHT} queueFlightsSelected={queueFlightsSelected}/>
                 </Col>
             </Row>
         </Grid>
