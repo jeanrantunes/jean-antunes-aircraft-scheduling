@@ -5,18 +5,18 @@ export const Container = styled.div`
   position: relative;
   height: 50px;
   width: 100%;
-  background: #bebebe;
+  background: var(--gray);
   margin-top: 20px;
 `
 
 export const ScheduleService = styled.div`
-  background: #04aa6d;
+  background: var(--green);
   height: 100%;
   position: absolute;
 `
 
 export const TurnaroundTime = styled.div`
-  background: #8a2be2;
+  background: var(--purple);
   height: 100%;
   position: absolute;
 `

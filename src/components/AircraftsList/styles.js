@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   list-style-type: none;
 `
 
@@ -11,7 +11,7 @@ export const AircraftsCard = styled.button`
 `
 
 export const Pecentage = styled.div`
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   width: 60px;
   margin: 0 auto;
 `

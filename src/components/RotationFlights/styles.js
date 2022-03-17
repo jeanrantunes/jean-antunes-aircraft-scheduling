@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FlightsCard = styled.li`
   padding: 10px 0;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   margin-bottom: 20px;
   @media (min-width: 768px) {
     padding: 20px 10px;

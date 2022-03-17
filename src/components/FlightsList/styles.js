@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { ScrolableList } from 'styles/scrollable'
 
 export const ScrolableFlightsList = styled(ScrolableList)`
-  border: 1px solid #000;
+  border: 1px solid var(--black);
 `
 
 export const CenteredLabel = styled.span`
@@ -13,7 +13,7 @@ export const CenteredLabel = styled.span`
 
 export const Card = styled.li`
   display: flex;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   padding: 10px;
   height: 150px;
   align-items: center;
