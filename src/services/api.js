@@ -1,5 +1,5 @@
-import axios from "axios";
+import axios from 'axios'
 
 export const api = axios.create({
-    baseURL: 'https://infinite-dawn-93085.herokuapp.com/',
+  baseURL: 'https://infinite-dawn-93085.herokuapp.com/'
 })

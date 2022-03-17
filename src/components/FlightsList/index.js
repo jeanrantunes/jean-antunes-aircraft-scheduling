@@ -1,4 +1,4 @@
-import FlightsList from "./FlightsList";
+import FlightsList from './FlightsList'
 
-export {FlightsList}
+export { FlightsList }
 export default FlightsList
