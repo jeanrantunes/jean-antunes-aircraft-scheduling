@@ -7,7 +7,7 @@ export const getTomorrowDate = () => {
 }
 
 export const formatDate = date => {
-  if (!date) {
+  if (!date || !dayjs(date).isValid()) {
     return
   }
   return date.format('DD MMMM YYYY')

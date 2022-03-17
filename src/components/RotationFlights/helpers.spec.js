@@ -1,3 +1,5 @@
+import { DAY_IN_SECONDS } from 'constants/time'
+
 import {
   isNotPassedMidnight,
   couldItBeTheNextFlight,
@@ -11,7 +13,7 @@ describe('isNotPassedMidnight method', () => {
   })
   it('should return true if <= 24h (in seconds) is passed in', () => {
     expect(isNotPassedMidnight(3)).toBeTruthy()
-    expect(isNotPassedMidnight(86400)).toBeTruthy()
+    expect(isNotPassedMidnight(DAY_IN_SECONDS)).toBeTruthy()
   })
   it('should return false if invalid values were passed in', () => {
     expect(isNotPassedMidnight(null)).toBeFalsy()

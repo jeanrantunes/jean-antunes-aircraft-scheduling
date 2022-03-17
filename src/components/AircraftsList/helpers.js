@@ -1,4 +1,4 @@
-export const DAY_IN_SECONDS = 86400
+import { DAY_IN_SECONDS } from 'constants/time'
 
 export const getPercentageOfUtilization = flights => {
   const totalTime = flightInSecondsSum(flights)

@@ -1,15 +1,9 @@
 import { useRef } from 'react'
 import { Container, ScheduleService, TurnaroundTime } from './styles'
-
-const DAY_IN_SECONDS = 86400
+import { calculatePositionInTimeline } from './helpers'
 
 const Timeline = ({ flights }) => {
   const timelineRef = useRef(null)
-
-  const getPosition = time => {
-    const widthTimeline = timelineRef.current.clientWidth
-    return Math.ceil((widthTimeline / DAY_IN_SECONDS) * time)
-  }
 
   return (
     <Container ref={timelineRef}>
@@ -20,8 +14,12 @@ const Timeline = ({ flights }) => {
             {previousFlight && (
               <TurnaroundTime
                 style={{
-                  left: `${getPosition(previousFlight.arrivaltime)}px`,
-                  width: `${getPosition(
+                  left: `${calculatePositionInTimeline(
+                    timelineRef.current.clientWidth,
+                    previousFlight.arrivaltime
+                  )}px`,
+                  width: `${calculatePositionInTimeline(
+                    timelineRef.current.clientWidth,
                     flight.departuretime - previousFlight.arrivaltime
                   )}px`
                 }}
@@ -29,8 +27,12 @@ const Timeline = ({ flights }) => {
             )}
             <ScheduleService
               style={{
-                left: `${getPosition(flight.departuretime)}px`,
-                width: `${getPosition(
+                left: `${calculatePositionInTimeline(
+                  timelineRef.current.clientWidth,
+                  flight.departuretime
+                )}px`,
+                width: `${calculatePositionInTimeline(
+                  timelineRef.current.clientWidth,
                   flight.arrivaltime - flight.departuretime
                 )}px`
               }}

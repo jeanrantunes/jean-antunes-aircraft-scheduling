@@ -1,3 +1,5 @@
+import { DAY_IN_SECONDS } from 'constants/time'
+
 export const couldItBeTheNextFlight = (queueFlightsSelected, flight) => {
   if (!flight) {
     return
@@ -22,7 +24,7 @@ export const isNotPassedMidnight = arrivaltime => {
   if (!arrivaltime) {
     return false
   }
-  return arrivaltime <= 86400
+  return arrivaltime <= DAY_IN_SECONDS
 }
 
 export const doesRespectTheTurnaround = (
