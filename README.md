@@ -43,7 +43,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Notes
 
-- This project was created using node 16
+- This project was created using node v16.14.0
+- Tests coverage the main business rules
 
 
 
