@@ -1,12 +1,14 @@
 import { useRef } from 'react'
 import { Container, ScheduleService, TurnaroundTime } from './styles'
 
+const DAY_IN_SECONDS = 86400
+
 const Timeline = ({ flights }) => {
   const timelineRef = useRef(null)
 
   const getPosition = time => {
     const widthTimeline = timelineRef.current.clientWidth
-    return Math.ceil(time / widthTimeline)
+    return Math.ceil((widthTimeline / DAY_IN_SECONDS) * time)
   }
 
   return (
