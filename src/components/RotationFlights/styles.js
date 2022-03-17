@@ -1,21 +1,12 @@
 import styled from 'styled-components'
-import { Col } from 'react-flexbox-grid';
-
-export const Container = styled.div`
-`
-
-export const FlightsList = styled.div`
-
-`
 
 export const FlightsCard = styled.li`
-    padding: 20px 10px;
+    padding: 10px 0; 
     border: 1px solid #000;
     margin-bottom: 20px;
-`
-
-export const Label = styled.span`
-    display: block;
+    @media (min-width: 768px) {
+        padding: 20px 10px;
+    }
 `
 
 export const FlightLabel = styled.span`
@@ -31,10 +22,7 @@ export const Arrow = styled.span`
     font-size: 2.5rem;
 `
 
-export const DestinationLabels = styled(Col)`
-    text-align: right;
-`
-
 export const CheckboxInput = styled.input`
     float: right;
+    cursor: pointer;
 `

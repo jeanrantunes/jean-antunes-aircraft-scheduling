@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-import {Container, Header, Content} from './styles'
+import {Header} from './styles'
 import {ScheduleDate} from '../ScheduleDate'
 import {AircraftsList} from '../AircraftsList'
 import {RotationFlights} from '../RotationFlights'
@@ -24,12 +24,12 @@ const Dashboard = () => {
             </Row>
             <Row>
                 <Col xs={4}>
-                    <AircraftsList height={AIRCRAFT_AND_FLIGHTS_HEIGHT} setAircraftSelected={setAircraftSelected}/>
+                    <AircraftsList height={AIRCRAFT_AND_FLIGHTS_HEIGHT} setAircraftSelected={setAircraftSelected} flightsSelected={queueFlightsSelected}/>
                 </Col>
                 <Col xs={4}>
                     <div>
                         <RotationFlights height={ROTATION_FLIGHTS_HEIGHT} aircraftSelected={aircraftSelected} queueFlightsSelected={queueFlightsSelected} setQueueFlightsSelected={setQueueFlightsSelected}/>
-                        <Timeline />
+                        <Timeline flights={queueFlightsSelected} />
                     </div>
                 </Col>
                 <Col xs={4}>

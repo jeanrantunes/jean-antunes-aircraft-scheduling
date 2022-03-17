@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     border: 1px solid #000;
+    list-style-type: none;
 `
 
 export const AircraftsCard = styled.button`
