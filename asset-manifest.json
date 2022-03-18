@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jean-antunes-aircraft-scheduling/static/css/main.3bda0d1b.css",
-    "main.js": "/jean-antunes-aircraft-scheduling/static/js/main.c8c568c6.js",
+    "main.js": "/jean-antunes-aircraft-scheduling/static/js/main.ea5c9f9f.js",
     "index.html": "/jean-antunes-aircraft-scheduling/index.html",
     "main.3bda0d1b.css.map": "/jean-antunes-aircraft-scheduling/static/css/main.3bda0d1b.css.map",
-    "main.c8c568c6.js.map": "/jean-antunes-aircraft-scheduling/static/js/main.c8c568c6.js.map"
+    "main.ea5c9f9f.js.map": "/jean-antunes-aircraft-scheduling/static/js/main.ea5c9f9f.js.map"
   },
   "entrypoints": [
     "static/css/main.3bda0d1b.css",
-    "static/js/main.c8c568c6.js"
+    "static/js/main.ea5c9f9f.js"
   ]
 }
