@@ -28,6 +28,9 @@ Launches the test runner in the interactive watch mode.
 If you are on the root folder and run this command, the unit tests will run
 If you are on the e2e folder and run this command, the e2e tests will run.
 
+### `yarn test:coverage`
+
+Runs the tests and runs the coverage.
 
 ### `yarn deploy`
 
@@ -53,7 +56,6 @@ Open [http://localhost:6006](http://localhost:6006) to view it in your browser.
 - The E2E tests are in the e2e folder and covers the happy and unhappy paths of the app
 - To run e2e tests it is necessary to run the app
 - As the e2e is a separate project, you need to install its dependencies before running
-
 
 
 

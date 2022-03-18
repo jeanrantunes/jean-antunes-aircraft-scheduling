@@ -23,7 +23,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test:coverage": "CI=true npm test -- --env=jsdom --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -80,5 +81,13 @@
     "prettier": "^2.6.0",
     "styled-components": "^5.3.3",
     "webpack": "^5.70.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/*.stories.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/build/**"
+    ]
   }
 }
