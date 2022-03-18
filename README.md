@@ -26,7 +26,7 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.
 If you are on the root folder and run this command, the unit tests will run
-If you are on the e2e folder and run this command, the e2e tests will run
+If you are on the e2e folder and run this command, the e2e tests will run.
 
 
 ### `yarn deploy`
@@ -52,6 +52,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in your browser.
 - This project was created using node v16.14.0. To avoid eslint and tests errors, use this version
 - The E2E tests are in the e2e folder and covers the happy and unhappy paths of the app
 - To run e2e tests it is necessary to run the app
+- As the e2e is a separate project, you need to install its dependencies before running
 
 
 

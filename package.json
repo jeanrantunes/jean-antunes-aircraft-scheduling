@@ -78,7 +78,6 @@
     "eslint-plugin-standard": "^5.0.0",
     "gh-pages": "^3.2.3",
     "prettier": "^2.6.0",
-    "storybook-addon-mock": "^2.3.0",
     "styled-components": "^5.3.3",
     "webpack": "^5.70.0"
   }
