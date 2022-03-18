@@ -8,7 +8,7 @@ import { CircularProgress, ContainerLoading } from 'styles/circularProgress'
 import { Arrow, CheckboxInput, FlightsCard, FlightLabel } from './styles'
 import { couldItBeTheNextFlight } from './helpers'
 
-const AircraftsList = ({
+const RotationFlights = ({
   aircraftSelected,
   height,
   queueFlightsSelected,
@@ -143,4 +143,4 @@ const AircraftsList = ({
   )
 }
 
-export default AircraftsList
+export default RotationFlights

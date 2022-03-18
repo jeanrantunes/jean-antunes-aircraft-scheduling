@@ -14,11 +14,10 @@ const AircraftsList = ({ setAircraftSelected, flightsSelected, height }) => {
 
   useEffect(() => {
     const getAircrafts = async () => {
-      setIsLoading(true)
+      // setIsLoading(true)
       try {
         const { data } = await api.get('/aircrafts')
         setAircrafts(data.data)
-        // setAircraftSelected(data.data[0]) // by default, select first
       } catch (err) {
         alert('Error aircrafts endpoint.', err)
       } finally {
@@ -33,13 +32,13 @@ const AircraftsList = ({ setAircraftSelected, flightsSelected, height }) => {
     <>
       <Title>Aircrafts</Title>
       <Container style={{ height }}>
-        <ScrolableList>
+        <ScrolableList id='aircrafts-list'>
           {isLoading ? (
             <ContainerLoading>
               <CircularProgress />
             </ContainerLoading>
           ) : (
-            aircrafts.map(aircraft => (
+            aircrafts?.map(aircraft => (
               <li key={aircraft.ident}>
                 <AircraftsCard onClick={() => setAircraftSelected(aircraft)}>
                   <Grid>

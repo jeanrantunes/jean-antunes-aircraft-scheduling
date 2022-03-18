@@ -1,0 +1,14 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "cypress run",
+    "test:watch": "cypress open",
+    "cypress:verify": "cypress verify"
+  },
+  "dependencies": {
+    "cypress": "^9.5.2"
+  }
+}

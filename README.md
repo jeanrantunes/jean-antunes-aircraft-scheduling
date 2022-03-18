@@ -24,8 +24,10 @@ You may also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
+If you are on the root folder and run this command, the unit tests will run
+If you are on the e2e folder and run this command, the e2e tests will run
+
 
 ### `yarn deploy`
 
@@ -44,7 +46,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Notes
 
 - This project was created using node v16.14.0
-- Tests coverage the main business rules
+- The E2E tests are in the e2e folder and covers the happy and unhappy paths of the app
 
 
 

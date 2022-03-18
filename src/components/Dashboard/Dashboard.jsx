@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
+import {
+  AIRCRAFT_AND_FLIGHTS_HEIGHT,
+  ROTATION_FLIGHTS_HEIGHT
+} from 'constants/sizeComponents'
 import { Header } from './styles'
 import { ScheduleDate } from '../ScheduleDate'
 import { AircraftsList } from '../AircraftsList'
 import { RotationFlights } from '../RotationFlights'
 import { FlightsList } from '../FlightsList'
 import { Timeline } from '../Timeline'
-
-const AIRCRAFT_AND_FLIGHTS_HEIGHT = 400
-const ROTATION_FLIGHTS_HEIGHT = 350
 
 const Dashboard = () => {
   const [aircraftSelected, setAircraftSelected] = useState(null)

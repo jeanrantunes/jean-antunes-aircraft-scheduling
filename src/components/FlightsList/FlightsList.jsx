@@ -7,7 +7,7 @@ const FlightsList = ({ queueFlightsSelected, height }) => {
   return (
     <>
       <Title>Flights</Title>
-      <ScrolableFlightsList style={{ height }}>
+      <ScrolableFlightsList id='selected-flights' style={{ height }}>
         {queueFlightsSelected.map(flight => (
           <Card key={flight.id}>
             <Grid>

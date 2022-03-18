@@ -7,12 +7,13 @@ const Timeline = ({ flights }) => {
 
   return (
     <Container ref={timelineRef}>
-      {flights.map((flight, index, flightsSelected) => {
+      {flights?.map((flight, index, flightsSelected) => {
         const previousFlight = index > 0 ? flightsSelected[index - 1] : null
         return (
           <div key={flight.id}>
             {previousFlight && (
               <TurnaroundTime
+                className={'turnaround-time'}
                 style={{
                   left: `${calculatePositionInTimeline(
                     timelineRef.current.clientWidth,
@@ -26,6 +27,7 @@ const Timeline = ({ flights }) => {
               />
             )}
             <ScheduleService
+              className={'schedule-service'}
               style={{
                 left: `${calculatePositionInTimeline(
                   timelineRef.current.clientWidth,
