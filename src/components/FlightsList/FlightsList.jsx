@@ -3,12 +3,12 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Title, DestinationLabels, Label } from 'styles/typografy'
 import { ScrolableFlightsList, CenteredLabel, Card } from './styles'
 
-const FlightsList = ({ queueFlightsSelected, height }) => {
+const FlightsList = ({ title, queueFlightsSelected, height }) => {
   return (
     <>
-      <Title>Flights</Title>
+      {title && <Title>{title}</Title>}
       <ScrolableFlightsList id='selected-flights' style={{ height }}>
-        {queueFlightsSelected.map(flight => (
+        {queueFlightsSelected?.map(flight => (
           <Card key={flight.id}>
             <Grid>
               <Row>
