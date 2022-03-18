@@ -43,10 +43,15 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `yarn storybook`
+
+Runs the app in the storybook.\
+Open [http://localhost:6006](http://localhost:6006) to view it in your browser.
 ## Notes
 
-- This project was created using node v16.14.0
+- This project was created using node v16.14.0. To avoid eslint and tests errors, use this version
 - The E2E tests are in the e2e folder and covers the happy and unhappy paths of the app
+- To run e2e tests it is necessary to run the app
 
 
 

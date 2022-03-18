@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ScrolableList = styled.ul`
   max-height: 100%;
   overflow-y: auto;
+  list-style-type: none;
   &::-webkit-scrollbar {
     display: none;
   }

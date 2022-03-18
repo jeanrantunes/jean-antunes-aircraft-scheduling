@@ -5,11 +5,12 @@ import React from 'react'
 
 describe('Timeline component', () => {
   describe('when 2 flights are scheduled', () => {
-    it('should return 1 turnaround time bar and 2 schedule service bars', () => {
-      jest
-        .spyOn(React, 'useRef')
-        .mockReturnValueOnce({ current: { clientWidth: 200 } })
+    jest
+      .spyOn(React, 'useRef')
+      .mockReturnValueOnce({ current: { clientWidth: 200 } })
 
+    jest.spyOn(React, 'useEffect').mockImplementationOnce(f => f())
+    it('should return 1 turnaround time bar and 2 schedule service bars', () => {
       const { container } = render(
         <Timeline flights={[flights.data[0], flights.data[1]]} />
       )
@@ -18,10 +19,6 @@ describe('Timeline component', () => {
     })
 
     it('should return no bars if no flights were added', () => {
-      jest
-        .spyOn(React, 'useRef')
-        .mockReturnValueOnce({ current: { clientWidth: 300 } })
-
       const { container } = render(<Timeline />)
       expect(container.querySelectorAll('.turnaround-time').length).toBe(0)
       expect(container.querySelectorAll('.schedule-service').length).toBe(0)

@@ -28,6 +28,7 @@ const Dashboard = () => {
       <Row>
         <Col xs={4}>
           <AircraftsList
+            title='Aircrafts'
             height={AIRCRAFT_AND_FLIGHTS_HEIGHT}
             setAircraftSelected={setAircraftSelected}
             flightsSelected={queueFlightsSelected}
@@ -46,6 +47,7 @@ const Dashboard = () => {
         </Col>
         <Col xs={4}>
           <FlightsList
+            title='Flights'
             height={AIRCRAFT_AND_FLIGHTS_HEIGHT}
             queueFlightsSelected={queueFlightsSelected}
           />

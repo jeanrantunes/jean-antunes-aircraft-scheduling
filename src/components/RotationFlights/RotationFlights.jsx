@@ -33,6 +33,7 @@ const RotationFlights = ({
       setHasMoreFlights(offset * limit < total)
       setFlights([...flights, ...data.data])
     } catch (err) {
+      console.log(err)
       alert('Error rotation flights component:', err)
     }
   }

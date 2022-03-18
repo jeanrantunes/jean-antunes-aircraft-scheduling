@@ -8,7 +8,12 @@ import { getPercentageOfUtilization } from './helpers'
 import { CircularProgress, ContainerLoading } from 'styles/circularProgress'
 import { AircraftsCard, Container, Pecentage } from './styles'
 
-const AircraftsList = ({ setAircraftSelected, flightsSelected, height }) => {
+const AircraftsList = ({
+  title,
+  setAircraftSelected,
+  flightsSelected,
+  height
+}) => {
   const [aircrafts, setAircrafts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -30,7 +35,7 @@ const AircraftsList = ({ setAircraftSelected, flightsSelected, height }) => {
 
   return (
     <>
-      <Title>Aircrafts</Title>
+      {title && <Title>{title}</Title>}
       <Container style={{ height }}>
         <ScrolableList id='aircrafts-list'>
           {isLoading ? (

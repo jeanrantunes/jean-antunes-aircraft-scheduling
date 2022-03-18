@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   border: 1px solid var(--black);
-  list-style-type: none;
 `
 
 export const AircraftsCard = styled.button`
