@@ -2,7 +2,7 @@
   "name": "jean-antunes-aircraft-scheduling",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gitname.github.io/jean-antunes-aircraft-scheduling",
+  "homepage": "https://jeanrantunes.github.io/jean-antunes-aircraft-scheduling",
   "dependencies": {
     "axios": "^0.26.1",
     "dayjs": "^1.11.0",
