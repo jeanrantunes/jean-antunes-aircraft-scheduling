@@ -8,6 +8,9 @@ export default {
 const Template = args => <TimelineComponent {...args} />
 
 export const Timeline = Template.bind({})
+Timeline.parameters = {
+  layout: 'fullscreen',
+}
 Timeline.args = {
   flights: [
     {

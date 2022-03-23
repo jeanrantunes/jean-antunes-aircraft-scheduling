@@ -4,6 +4,7 @@ import { api } from 'services/api'
 import aircraftsMock from '../../../__mocks/aircrafts.json'
 import flightsMock from '../../../__mocks/flights.json'
 
+// mock api response
 const mock = new MockAdapter(api)
 
 mock.onGet('/aircrafts').reply(200, {

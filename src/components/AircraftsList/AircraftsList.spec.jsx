@@ -1,11 +1,10 @@
-import { render, waitFor } from '@testing-library/react'
+import { render, waitFor } from 'utils/tests'
 import aircraftsMock from '../../../__mocks/aircrafts.json'
 import flightsMock from '../../../__mocks/flights.json'
 import AircraftsList from './AircraftsList'
-import { api } from 'services/api'
+import { useAircrafts } from 'hooks/useAircrafts'
 
-jest.mock('services/api')
-window.alert = jest.fn()
+jest.mock('hooks/useAircrafts')
 
 describe('AircraftsList component', () => {
   const setAircraftSelected = jest.fn()
@@ -13,7 +12,10 @@ describe('AircraftsList component', () => {
   const height = 300
 
   beforeEach(() => {
-    api.get.mockResolvedValueOnce({ data: aircraftsMock })
+    useAircrafts.mockReturnValue({
+      isLoading: false,
+      aircrafts: aircraftsMock.data
+    })
   })
 
   it('should render AircraftsList with all aircrafts mocked', async () => {

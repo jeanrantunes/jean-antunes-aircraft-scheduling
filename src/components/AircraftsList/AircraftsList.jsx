@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
-import { api } from 'services/api'
+import { useAircrafts } from 'hooks/useAircrafts'
 import { ScrolableList } from 'styles/scrollable'
 import { Title } from 'styles/typografy'
 import { getPercentageOfUtilization } from './helpers'
@@ -14,24 +13,7 @@ const AircraftsList = ({
   flightsSelected,
   height
 }) => {
-  const [aircrafts, setAircrafts] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const getAircrafts = async () => {
-      // setIsLoading(true)
-      try {
-        const { data } = await api.get('/aircrafts')
-        setAircrafts(data.data)
-      } catch (err) {
-        alert('Error aircrafts endpoint.', err)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    getAircrafts()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const { aircrafts, isLoading } = useAircrafts()
 
   return (
     <>

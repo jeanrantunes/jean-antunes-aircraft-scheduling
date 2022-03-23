@@ -1,9 +1,19 @@
-import { render, waitFor } from '@testing-library/react'
+import { render, waitFor } from 'utils/tests'
 import aircraftsMock from '../../../__mocks/aircrafts.json'
 import flightsMock from '../../../__mocks/flights.json'
 import RotationFlights from './RotationFlights'
-import { api } from 'services/api'
-jest.mock('services/api')
+import { useFlights } from 'hooks/useFlights'
+
+const mockIntersectionObserver = function () {
+  return {
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn()
+  }
+}
+window.IntersectionObserver = mockIntersectionObserver
+
+jest.mock('hooks/useFlights')
 
 describe('RotationFlights component', () => {
   const aircraftSelected = aircraftsMock.data[0]
@@ -12,7 +22,16 @@ describe('RotationFlights component', () => {
   const setQueueFlightsSelected = jest.fn()
 
   beforeEach(() => {
-    api.get.mockResolvedValueOnce({ data: flightsMock })
+    useFlights.mockReturnValue({
+      fetchNextPage: jest.fn(),
+      updateFlight: jest.fn(),
+      flights: [
+        {
+          ...flightsMock
+        }
+      ],
+      pagination: flightsMock.pagination
+    })
   })
 
   it('should render the list of flights', () => {
